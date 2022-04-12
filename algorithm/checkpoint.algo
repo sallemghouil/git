@@ -1,0 +1,23 @@
+ALGORITHM Sentence
+VAR
+    ch:char 
+       compt:integer:=1 
+       nbr_vowels:integer:=0
+BEGIN
+WHILE (ch <> ‘.’) DO
+    
+
+    while(ch <> ‘.’)
+{
+write('Entrer un char ') 
+read(ch) 
+ch:=ch+1
+IF (ch=' ') THEN
+    compt:=compt+1
+END_IF
+IF (ch= 'a' or ch ='A' or ch='e' or ch='E' or ch='i' or ch='I' or ch='o' or ch='O' or ch='u' or ch='U') THEN
+    nbr_vowels:=nbr_vowels+1
+END_IF
+END_WHILE
+
+END
