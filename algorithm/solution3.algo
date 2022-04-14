@@ -1,0 +1,25 @@
+ALGORITHM solution3
+VAR
+  htab : HASH_TABLE<INTEGER,INTEGER>
+  arr1 : ARRAY_OF INTEGER[20];
+  arr2 : ARRAY_OF INTEGER[30];
+ i,j,sum : INTEGER
+BEGIN
+read(arr1)
+read(arr2)
+sum :=0
+FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+    htab.insert(arr1[i], 1)
+END_FOR
+FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+    IF (htab.lookup(j)) THEN
+        htab.get(j)=2
+    ELSE
+        htab.insert(arr2[j], 1)
+    END_IF
+END_FOR
+FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+    IF (htab.get(arr1[i]=2) THEN
+          sum := sum + 2*arr1[i];
+    END_IF
+END_FOR
