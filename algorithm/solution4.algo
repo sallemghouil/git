@@ -18,3 +18,14 @@ FOR j FROM 0 TO arr2.length-1 STEP 1  DO
         htab.insert(arr2[j], 1)
     END_IF
 END_FOR
+FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+    IF (htab.get(arr1[i]=1) THEN
+          sum := sum + arr1[i]
+    END_IF
+END_FOR
+FOR j FROM 0 TO arr2.length-1 STEP 1  DO
+    IF (htab.get(arr2[j]=1) THEN
+          sum := sum + arr2[j]
+END_IF
+END_FOR
+END
