@@ -1,0 +1,17 @@
+ALGORITHM Insertion_sort
+VAR
+    var i,j,key:INTEGER
+    tab: ARRAY_OF INTEGER;
+BEGIN
+    
+
+FOR i FROM 0 TO i<tab.lentgh STEP 0  DO
+    key:=tab[i]
+    j:=i-1
+    WHILE (tab[j]>key and j>0) DO
+          tab[j+1]=tab[j]
+          j--
+    END_WHILE
+    tab[j+1]=key
+END_FOR
+END
