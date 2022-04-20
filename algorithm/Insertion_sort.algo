@@ -5,10 +5,10 @@ VAR
 BEGIN
     
 
-FOR i FROM 0 TO i<tab.lentgh STEP 0  DO
+FOR i FROM 0 TO tab.lentgh STEP 1  DO
     key:=tab[i]
     j:=i-1
-    WHILE (tab[j]>key and j>0) DO
+    WHILE (tab[j]>key and j>=0) DO
           tab[j+1]=tab[j]
           j--
     END_WHILE
