@@ -1,0 +1,79 @@
+//////////*procedure*////////////
+    PROCEDURE dot_product(arr1,arr2:ARRAY_OF INTEGER, VAR ps : INTEGER)
+    VAR 
+        i : INTEGER;
+    BEGIN
+        FOR i FROM 0 TO arr1.length DO
+            ps := ps + arr1[i] * arr2[i];
+        END_FOR
+    END
+    //Algorithm_principale
+    ALGORITHM DOT_PRODUCT
+VAR
+    arr1,arr2: ARRAY_OF INTEGER;
+    ps :=0,n,i : INTEGER; 
+BEGIN
+     
+    Write('donner n')
+    Read(n)
+    FOR i FROM 0 TO n STEP 1  DO
+        Write('enter corrdonnée de vecteur');
+            Read(arr1[i])
+       
+    END_FOR
+    FOR i FROM 0 TO n STEP 1  DO
+        Write('enter corrdonnée de vecteur');
+            Read(arr2[i])
+       
+    END_FOR
+    FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+        FOR j FROM i+1 TO arr2.length STEP 1  DO
+            dot_product (arr1[i],arr2[i],ps);
+            IF (ps == 0) THEN
+                Write(arr1[i] +'est' + arr2[i] + 'orthogonaux');
+            ELSE
+                Write(arr1[i] +'est' + arr2[i] + 'non orthogonaux');
+            END_IF
+        END_FOR
+    END_FOR
+END
+//////////*fonction*///////
+FUNCTION dot_product(arr1,arr2: ARRAY_OF INTEGER, ps:INTEGER): INTEGER
+    VAR
+        i: INTEGER;
+    BEGIN
+        FOR i FROM 0 TO arr1.length DO
+            ps := ps + arr1[i] * arr2[i];
+        END_FOR
+        RETURN ps;
+    END
+   //Algorithm_principale
+     ALGORITHM DOT_PRODUCT
+VAR
+    arr1,arr2: ARRAY_OF INTEGER;
+    ps :=0,n,i : INTEGER; 
+BEGIN
+     
+    Write('donner n')
+    Read(n)
+    FOR i FROM 0 TO n STEP 1  DO
+        Write('enter corrdonnée de vecteur');
+            Read(arr1[i])
+       
+    END_FOR
+    FOR i FROM 0 TO n STEP 1  DO
+        Write('enter corrdonnée de vecteur');
+            Read(arr2[i])
+       
+    END_FOR
+    FOR i FROM 0 TO arr1.length-1 STEP 1  DO
+        FOR j FROM i+1 TO arr2.length STEP 1  DO
+            ps:= dot_product (arr1[i],arr2[i],ps);
+            IF (ps == 0) THEN
+                Write(arr1[i] +'est' + arr2[i] + 'orthogonaux');
+            ELSE
+                Write(arr1[i] +'est' + arr2[i] + 'non orthogonaux');
+            END_IF
+        END_FOR
+    END_FOR
+END
