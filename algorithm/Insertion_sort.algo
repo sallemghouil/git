@@ -5,7 +5,7 @@ VAR
 BEGIN
     
 
-FOR i FROM 0 TO tab.lentgh STEP 1  DO
+FOR i FROM 1 TO tab.lentgh-1 STEP 1  DO
     key:=tab[i]
     j:=i-1
     WHILE (tab[j]>key and j>=0) DO
